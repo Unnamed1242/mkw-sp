@@ -13,6 +13,9 @@ public:
     virtual void vf04() = 0;
 
     REPLACE virtual void dt(s32 type);
+
+    nw4r::g3d::ResMdl resMdl();
+
     void revertMirrorPatches();
     void applyMirrorPatches();
 

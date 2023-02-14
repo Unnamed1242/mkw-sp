@@ -145,6 +145,8 @@ asset_in_files = {
         os.path.join('kartCameraParamThumbnails.bin'),
         # Mega TC
         os.path.join('MegaTC.brres'),
+        # Battle mode
+        os.path.join('balloon.brres'),
         # Online mode
         os.path.join('ItemSlotOnline.bin'),
     ],
@@ -1352,6 +1354,8 @@ code_in_files = {
         os.path.join('payload', 'egg', 'core', 'eggXfb.cc'),
         os.path.join('payload', 'egg', 'core', 'eggXfbManager.cc'),
         os.path.join('payload', 'egg', 'util', 'eggException.S'),
+        os.path.join('payload', 'game', 'battle', 'BalloonManager.cc'),
+        os.path.join('payload', 'game', 'battle', 'BalloonUnit.cc'),
         os.path.join('payload', 'game', 'battle', 'CoinManager.cc'),
         os.path.join('payload', 'game', 'effect', 'Effect.S'),
         os.path.join('payload', 'game', 'effect', 'EffectManager.cc'),
