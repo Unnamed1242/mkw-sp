@@ -11,6 +11,8 @@
 #include <sp/storage/Storage.hh>
 #include <vendor/tjpgd/tjpgd.h>
 
+#include <atomic>
+
 namespace UI {
 
 class CourseSelectPage : public Page {
@@ -92,9 +94,10 @@ private:
     u32 m_sheetIndex;
     u32 m_lastSelected;
     Request m_request;
-    std::array<bool, 9> m_thumbnailChanged;
-    std::array<u32, 9> m_databaseIds;
-    std::array<std::array<std::unique_ptr<u8[]>, 3>, 9> m_buffers;
+    std::array<std::atomic<bool>, 27> m_thumbnailChanged;
+    std::array<u32, 27> m_databaseIds;
+    std::array<std::array<std::unique_ptr<u8[]>, 3>, 27> m_buffers;
+    std::array<std::array<GXTexObj, 3>, 27> m_texObjs;
     OSThreadQueue m_queue;
     u8 m_stack[0x5000 /* 20 KiB */];
     OSThread m_thread;
